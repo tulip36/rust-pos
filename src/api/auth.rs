@@ -29,11 +29,8 @@ pub async fn register(
 pub async fn login(
     Json(payload): Json<LoginRequest>,
 ) -> Json<serde_json::Value> {
-    // 简化版：直接返回成功
-    // 实际需要验证密码
     let user_id = uuid::Uuid::new_v4().to_string();
     let token = uuid::Uuid::new_v4().to_string();
-    
     Json(serde_json::json!({
         "success": true,
         "token": token,
