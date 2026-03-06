@@ -1,0 +1,14 @@
+[package]
+name = "rust-pos-frontend"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+dioxus = "0.4"
+dioxus-web = "0.4"
+serde = "1"
+serde_json = "1"
+
+[profile.release]
+opt-level = "s"
+lto = true
